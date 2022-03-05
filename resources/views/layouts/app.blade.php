@@ -17,12 +17,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/all.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/bs.css') }}" rel="stylesheet">
-	
+
 	@livewireStyles
-	
+
 </head>
 <body id="page-top">
 	<!-- Page Wrapper -->
@@ -56,7 +54,7 @@
             <div class="sidebar-heading">
                 System Admin
             </div>
-			
+
 			 <!-- Nav Item - Database Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDatabase"
@@ -68,11 +66,11 @@
                     <div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Manage Database</h6>
                         <h6 class="collapse-item" href="#" data-toggle="modal" data-target="#importDataModal">Import Data</h6>
-                        <a class="collapse-item" href="#">Browse Data</a>
+                        <a class="collapse-item" href="#" data-toggle="modal" data-target="#dicomModal">Browse Data</a>
                     </div>
                 </div>
             </li>
-			
+
 			<!-- Nav Item - Models Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseModels"
@@ -87,7 +85,7 @@
                     </div>
                 </div>
             </li>
-			
+
 			<!-- Nav Item - Testing Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTesting"
@@ -103,14 +101,14 @@
                     </div>
                 </div>
             </li>
-			
+
 			<!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-brain"></i>
                     <span>Knowledge Base</span></a>
             </li>
-			
+
 			<!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -118,7 +116,7 @@
             <div class="sidebar-heading">
                 Template Interface Guide
             </div>
-			
+
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -523,30 +521,9 @@
                         <!-- Area Chart -->
                         <div class="col-xl-8 col-lg-7">
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
+                                    <livewire:dicom-modal />
                                 </div>
                             </div>
                         </div>
@@ -765,13 +742,16 @@
 
         </div>
         <!-- End of Content Wrapper -->
-		
+
+		<!-- Modals -->
 		<livewire:logout-modal />
 		<livewire:import-dicom />
+		<livewire:dicom-modal />
+		<!-- End Modals -->
 
     </div>
     <!-- End of Page Wrapper -->
-	
+
 	@livewireScripts
 </body>
 </html>
