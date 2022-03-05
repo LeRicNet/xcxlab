@@ -1,0 +1,3 @@
+<svg viewBox="0 0 161.43 161.43" xmlns="http://www.w3.org/2000/svg" {{ $attributes }}>
+	<defs><style>.cls-1,.cls-3{fill:#939598;}.cls-2{fill:#fff;}.cls-2,.cls-3{stroke:#231f20;stroke-miterlimit:10;}.cls-3{stroke-width:1.19px;}</style></defs>
+	<circle class="cls-1" cx="80.72" cy="80.72" r="80.72"/><rect class="cls-2" x="10.32" y="10.32" width="140.79" height="140.79"/><rect class="cls-3" x="39.17" y="39.17" width="83.1" height="83.1"/><rect class="cls-2" x="45.7" y="45.7" width="70.03" height="70.03"/></svg>
